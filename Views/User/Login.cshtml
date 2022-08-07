@@ -1,0 +1,36 @@
+@model User
+
+<h1>Dojo Survey</h1>
+    <form asp-controller="User" asp-action="Register" method="post">
+        <div class="survey-row">
+            <label asp-for="Name">Name: </label>
+            <input type="text" asp-for="Name"/>
+        </div>
+        <span asp-validation-for="Name"></span>
+        <div class="survey-row">
+            <label asp-for="DojoLocation">Dojo Location: </label>
+            <select asp-for="DojoLocation" id="DojoLocation">
+                <option value="San Jose">San Jose</option>
+                <option value="Sacramento">Sacramento</option>
+                <option value="Texas">Texas</option>
+                <option value="Los Angeles">Los Angeles</option>
+            </select>
+        </div>
+        <div class="survey-row">
+            <label asp-for="FavoriteLanguage">Favorite Language: </label>
+            <select asp-for="FavoriteLanguage" id="FavoriteLanguage">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+        </div>
+        <div class="survey-row" id="comment">
+            <label asp-for="Comment">Comment (optional): </label>
+            <textarea asp-for="Comment" id="Comment" cols="30" rows="3"></textarea>
+            <span asp-validation-for="Comment"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+

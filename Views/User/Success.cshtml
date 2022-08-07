@@ -1,0 +1,24 @@
+@model User
+
+<h1>Submitted Info</h1>
+
+<div id="result">
+    <div class="survey-row">
+        <b>Name: </b>
+        <p>@Model.Name</p>
+    </div>
+    <div class="survey-row">
+        <b>Dojo Location: </b>
+        <p>@Model.DojoLocation</p>
+    </div>
+    <div class="survey-row">
+        <b>Favorite Language: </b>
+        <p>@Model.FavoriteLanguage</p>
+    </div>
+    <div class="survey-row">
+        <b>Comment: </b>
+        <p>@Model.Comment</p>
+    </div>
+</div>
+
+<a href="/">Home</a>
